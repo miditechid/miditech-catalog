@@ -2499,7 +2499,7 @@ body.light-mode .footer-about {
 }
 
 .whatsapp-trigger-btn i {
-    font-size: 28px; /* Ukuran diperbesar dari standar */
+    font-size: 26px; /* Ukuran diperbesar dari standar */
     display: block;
     line-height: 0;  /* Menghilangkan spasi bawah font agar benar-benar di tengah */
 }
@@ -3079,6 +3079,7 @@ nav,
     }
 
 }
+
 
 
 
