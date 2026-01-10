@@ -1,0 +1,3061 @@
+/* public/style.css */
+
+:root {
+    /* Color Palette */
+    --pink: #f971aa;
+    --dark-pink: #ed2075;
+    --purple: #7748a8;
+    --dark-purple: #3f0581;
+    --blue: #6666ff;
+    --dark-blue: #1b1bcd;
+    --hover-purple-1: #7748a8;
+    --hover-dark-purple-1: #630671;
+    --hover-purple-2: #828ef8;
+    --hover-dark-blue-2: #4343ce;
+
+    /* Warna Header Gradient */
+    --header-grad-1: #f12f83;
+    --header-grad-2: #7743a4;
+    --header-grad-3: #5137e5;
+
+    /* Warna Dasar */
+    --dark-bg: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    /* Background Dark Mode tetap dipertahankan */
+    color: var(--text-primary);
+    margin: 0;
+    padding: 120px 0 0 0;
+    overflow-x: hidden;
+    position: relative;
+
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* === PERUBAHAN UTAMA DI SINI === */
+
+/* --- Radial Gradient Overlay Effects --- */
+.gradient-overlay-1,
+.gradient-overlay-2,
+.gradient-overlay-3,
+.gradient-overlay-4,
+.gradient-overlay-5,
+.gradient-overlay-6,
+.gradient-overlay-7,
+.gradient-overlay-8,
+.gradient-overlay-9,
+.gradient-overlay-10,
+.gradient-overlay-11,
+.gradient-overlay-12,
+.gradient-overlay-13,
+.gradient-overlay-14 {
+    position: absolute;
+    filter: blur(120px);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Kiri (Ungu) */
+.gradient-overlay-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(186, 49, 213, 0.902) 0%, transparent 70%);
+    top: 2%;
+    left: -5%;
+}
+
+/* Kanan (Biru) */
+.gradient-overlay-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(65, 103, 215, 0.947) 0%, transparent 70%);
+    top: 1%;
+    right: 5%;
+}
+
+/* Overlay ketiga */
+.gradient-overlay-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(245, 64, 173, 0.947) 0%, transparent 70%);
+    top: 3%;
+    right: 30%;
+}
+
+.gradient-overlay-4 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(96, 38, 108, 0.792) 0%, transparent 70%);
+    top: 5%;
+    right: 0%;
+}
+
+.gradient-overlay-5 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(29, 29, 180, 0.377) 0%, transparent 70%);
+    top: 15%;
+    left: -15%;
+}
+
+/* Overlay ketiga */
+.gradient-overlay-6 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(216, 26, 146, 0.514) 0%, transparent 70%);
+    top: 20%;
+    right: -15%;
+}
+
+.gradient-overlay-7 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(155, 29, 180, 0.511) 0%, transparent 70%);
+    top: 20%;
+    right: 45%;
+}
+
+/* Overlay ketiga */
+.gradient-overlay-8 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(216, 26, 146, 0.653) 0%, transparent 70%);
+    top: 28%;
+    left: -15%;
+}
+
+.gradient-overlay-9 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(207, 44, 44, 0.511) 0%, transparent 70%);
+    top: 32%;
+    left: 30%;
+}
+
+.gradient-overlay-10 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(183, 44, 207, 0.511) 0%, transparent 70%);
+    top: 27%;
+    right: 2%;
+}
+
+/* Kiri (Ungu) */
+.gradient-overlay-11 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(164, 34, 190, 0.902) 0%, transparent 70%);
+    top: 37%;
+    left: -15%;
+}
+
+/* Kanan (Biru) */
+.gradient-overlay-12 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(29, 29, 180, 0.564) 0%, transparent 70%);
+    top: 40%;
+    right: 5%;
+}
+
+/* Overlay ketiga */
+.gradient-overlay-13 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(216, 26, 146, 0.68) 0%, transparent 70%);
+    top: 45%;
+    left: 5%;
+}
+
+.gradient-overlay-14 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(163, 21, 192, 0.703) 0%, transparent 70%);
+    top: 55%;
+    right: 5%;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 18px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+nav .logo .logo-web {
+    color: #6447a7;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav .nav-links a {
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 5px 0;
+    white-space: nowrap;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    font-weight: 600;
+}
+
+nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--pink);
+    transition: width 0.3s ease;
+}
+
+nav .nav-links a:hover::after,
+nav .nav-links a.active::after {
+    width: 100%;
+}
+
+nav .nav-links a:hover {
+    color: var(--pink);
+    transform: translateY(-2px);
+}
+
+nav .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+/* Update style .logo agar flexbox aktif */
+nav .logo {
+    display: flex;
+    align-items: center; /* Agar gambar dan teks sejajar vertikal */
+    gap: 12px;           /* Jarak antara gambar dan teks */
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    text-decoration: none; /* Jaga-jaga jika logo dibungkus tag <a> */
+}
+
+/* Mengatur ukuran gambar logo */
+.navbar-logo-img {
+    height: 40px; /* Sesuaikan tinggi agar pas di navbar */
+    width: auto;  /* Lebar menyesuaikan proporsi */
+    object-fit: contain;
+}
+
+/* Penyesuaian khusus untuk Mobile (opsional, jika ingin lebih kecil di HP) */
+@media (max-width: 576px) {
+    .navbar-logo-img {
+        height: 32px; /* Sedikit lebih kecil di layar HP */
+    }
+    
+    nav .logo {
+        font-size: 16px; /* Font juga sedikit mengecil menyesuaikan */
+        gap: 8px;
+    }
+}
+
+/* --- General Button Styles --- */
+.btn {
+    padding: 8px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    text-decoration: none;
+    /* <-- TAMBAHKAN BARIS INI */
+}
+
+/* --- Outline Gradient Button --- */
+.btn-outline-gradient {
+    background:
+        linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+        linear-gradient(90deg, var(--pink), var(--purple)) border-box;
+}
+
+.btn-outline-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 10px rgba(249, 113, 170, 0.4),
+        0 0 20px rgba(119, 72, 168, 0.4);
+    background:
+        linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+        linear-gradient(135deg, var(--hover-purple-1), var(--hover-purple-2)) border-box;
+}
+
+/* Tombol Ikon */
+nav .icon-button {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .icon-button i {
+    width: 18px;
+    height: 18px;
+    stroke: var(--text-primary);
+}
+
+/* --- Solid Gradient Button --- */
+.btn-solid-gradient {
+    background: linear-gradient(to right, var(--pink), var(--purple));
+    border: none;
+}
+
+.btn-solid-gradient:hover {
+    background: linear-gradient(to right, var(--hover-purple-1), var(--hover-purple-2));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(119, 72, 168, 0.4);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    /* Mencegah elemen keluar saat animasi */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(90vh - 90px);
+    padding: 0 4%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 60px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    flex: 1.2;
+    max-width: 55%;
+}
+
+.hero-image {
+    flex: 0.8;
+    max-width: 45%;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 .highlight {
+    background: linear-gradient(45deg, #f9b06b, #f971aa, #7748a8, #748cd2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* === KODE BARU UNTUK ANIMASI HERO SECTION YANG DAPAT DIULANG === */
+
+/* 1. Atur keadaan awal elemen (sebelum terlihat) */
+.hero-content h1,
+.hero-content p,
+.hero-buttons,
+.hero-image {
+    opacity: 0;
+    /* Gunakan transition agar animasi bisa kembali ke keadaan awal dengan mulus */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang berbeda untuk setiap elemen */
+.hero-content h1 {
+    transform: translateY(40px);
+    /* Mulai dari bawah */
+}
+
+.hero-content p {
+    transform: translateY(40px);
+}
+
+.hero-buttons {
+    transform: translateY(40px);
+}
+
+.hero-image {
+    transform: scale(0.9);
+    /* Mulai dari skala kecil */
+}
+
+
+/* 2. Tentukan keadaan akhir saat section terlihat (memiliki kelas .is-visible) */
+.hero-section.is-visible .hero-content h1,
+.hero-section.is-visible .hero-content p,
+.hero-section.is-visible .hero-buttons,
+.hero-section.is-visible .hero-image {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    /* Kembali ke posisi dan skala normal */
+}
+
+/* 3. Tambahkan delay untuk menciptakan efek staggered (muncul satu per satu) */
+.hero-section.is-visible .hero-content p {
+    transition-delay: 0.2s;
+}
+
+.hero-section.is-visible .hero-buttons {
+    transition-delay: 0.4s;
+}
+
+.hero-section.is-visible .hero-image {
+    transition-delay: 0.3s;
+}
+
+
+/* === CSS UNTUK SECTION TENTANG KAMI === */
+
+.about-section {
+    padding: 100px 4%;
+    margin-top: 50px;
+    /* Jarak dari hero section */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-container {
+    background-color: #402c4a;
+    /* Warna ungu gelap dari gambar */
+    border-radius: 30px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    /* Diperlukan agar gambar bisa 'keluar' dengan benar */
+}
+
+.about-image-column {
+    flex: 1;
+    position: relative;
+}
+
+.about-image-column img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 120%;
+    height: auto;
+    max-width: none;
+    /* Gunakan transform untuk centering dan rotasi */
+    transform: translate(-50%, -50%) rotate(-10deg);
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.25));
+}
+
+.about-text-column {
+    flex: 1.1;
+    /* Beri sedikit lebih banyak ruang untuk teks */
+    padding-left: 20px;
+}
+
+.about-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 10px 0;
+}
+
+.about-heading {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+}
+
+.about-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: justify;
+    margin: 0;
+}
+
+/* === KODE BARU: ANIMASI UNTUK SECTION TENTANG KAMI === */
+
+/* 1. Atur keadaan awal elemen sebelum terlihat */
+.about-image-column img,
+.about-text-column>* {
+    /* Target semua elemen di dalam kolom teks */
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang berbeda untuk gambar dan teks */
+.about-image-column img {
+    /* Kita tambahkan transform baru ke transform yang sudah ada */
+    /* Animasi akan dimulai dari skala 0.9 dan rotasi -15derajat */
+    transform: translate(-50%, -50%) rotate(-15deg) scale(0.9);
+}
+
+.about-text-column>* {
+    transform: translateX(50px);
+    /* Teks akan masuk dari sisi kanan */
+}
+
+
+/* 2. Atur keadaan akhir saat section terlihat (memiliki kelas .is-visible) */
+.about-section.is-visible .about-image-column img {
+    opacity: 1;
+    /* Kembali ke transform asli */
+    transform: translate(-50%, -50%) rotate(-10deg) scale(1);
+}
+
+.about-section.is-visible .about-text-column>* {
+    opacity: 1;
+    transform: translateX(0);
+    /* Kembali ke posisi asli */
+}
+
+/* 3. Tambahkan delay agar elemen muncul satu per satu (efek staggered) */
+.about-section.is-visible .about-subtitle {
+    transition-delay: 0.2s;
+}
+
+.about-section.is-visible .about-heading {
+    transition-delay: 0.3s;
+}
+
+.about-section.is-visible .about-description {
+    transition-delay: 0.4s;
+}
+
+/* === PERBAIKAN FINAL UNTUK SECTION LAYANAN (HOVER OUTLINE) === */
+
+.services-section {
+    padding: 50px 4%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.section-title .highlight {
+    background: linear-gradient(45deg, #f9b06b, #f971aa, #7748a8, #748cd2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    border: 4px solid transparent;
+    /* Border harus ada dan transparan */
+    border-radius: 16px;
+    padding: 30px 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    color: #f1f1f1 !important;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* PERBAIKAN: Gaya hover kembali ke transform + box-shadow glow */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(170, 113, 190, 0.5);
+    /* Efek glow ungu halus */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    /* Ganti background dengan solid putih (dalam) dan gradasi (luar) */
+    background:
+        linear-gradient(#121212, #121212) padding-box,
+        linear-gradient(135deg, #aa71be, #4776e6, #f857a6, #ffc258) border-box;
+
+    /* Efek glow yang Anda inginkan */
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 0 15px rgba(142, 84, 233, 0.5),
+        0 0 25px rgba(247, 87, 100, 0.4);
+}
+
+.service-card::before {
+    display: none;
+}
+
+/* Konten card harus berada di atas pseudo-element */
+.icon-wrapper,
+.service-card h3,
+.service-card p {
+    position: relative;
+    z-index: 2;
+}
+
+.icon-wrapper {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(42, 35, 60, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper i {
+    width: 30px;
+    height: 30px;
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    transition: stroke 0.4s ease;
+    /* Tambahkan transisi untuk warna ikon */
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    transition: color 0.4s ease;
+}
+.service-card .service-list {
+    list-style-type: none; /* Menghilangkan bullet points */
+    padding: 0;            /* Menghilangkan padding kiri default */
+    margin: 0;             /* Menghilangkan margin default */
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.service-card .service-list li {
+    margin-bottom: 5px; /* Memberi sedikit jarak antar item */
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Media Query (tidak berubah) */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services-section .section-header,
+.services-section .service-card {
+    opacity: 0;
+    transform: translateY(50px);
+
+    /* 
+      Tentukan transisi. Ini akan membuat perubahan properti (opacity dan transform)
+      berjalan mulus selama 0.8 detik saat kelas .is-visible ditambahkan.
+    */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section mendapatkan kelas .is-visible dari JavaScript.
+  Elemen akan kembali ke opacity penuh dan posisi aslinya.
+*/
+.services-section.is-visible .section-header,
+.services-section.is-visible .service-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) menggunakan transition-delay.
+  Ini memberikan jeda waktu sebelum animasi setiap elemen dimulai, menciptakan alur yang dinamis.
+*/
+
+/* Header akan muncul pertama (tanpa delay tambahan) */
+.services-section.is-visible .section-header {
+    transition-delay: 0.1s;
+}
+
+/* Kartu pertama akan muncul sesaat setelah header */
+.services-section.is-visible .service-card:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+/* Kartu kedua muncul setelah kartu pertama */
+.services-section.is-visible .service-card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+/* Kartu ketiga muncul setelah kartu kedua */
+.services-section.is-visible .service-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* Kartu keempat muncul terakhir */
+.services-section.is-visible .service-card:nth-child(4) {
+    transition-delay: 0.5s;
+}
+
+/* === PERBAIKAN UNTUK SECTION FITUR === */
+
+.features-section {
+    padding: 80px 4%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.features-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    /* Jarak antar kolom diperlebar */
+}
+
+/* Kolom Kiri: Gambar */
+.features-image-column {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper-features {
+    position: relative;
+    width: 500px;
+}
+
+/* PERUBAHAN: Menghapus bentuk blob di belakang gambar */
+.image-wrapper-features::before {
+    display: none;
+    /* Sembunyikan pseudo-element blob */
+}
+
+.image-wrapper-features img {
+    /* Gambar sekarang menjadi elemen utama */
+    position: relative;
+    /* Bukan lagi absolute */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Kartu kecil yang melayang (Daily Analytics - Kanan Bawah) */
+.floating-card-feature {
+    position: absolute;
+    bottom: -30px;
+    right: -50px;
+    background: linear-gradient(135deg, #899be3, #3c4e98);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 180px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.4s ease;
+    z-index: 2;
+    /* Pastikan di atas gambar */
+}
+
+/* Efek hover untuk kedua kartu */
+.image-wrapper-features:hover .floating-card-feature {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.floating-card-feature i {
+    stroke-width: 1.5;
+    margin-bottom: 8px;
+}
+
+.floating-card-feature p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.floating-card-feature span {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Kolom Kanan: Teks */
+.features-text-column {
+    flex: 1.1;
+}
+
+.features-description {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 25px 0;
+}
+
+/* Daftar Fitur */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.features-list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.features-list i {
+    color: var(--pink);
+    /* Warna ikon checklist */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 992px) {
+    /* Membuat urutan tetap: Gambar di atas, Teks di bawah */
+    .features-container {
+        flex-direction: column; 
+        gap: 30px;
+        align-items: flex-start; /* Memastikan konten container di kiri */
+    }
+
+    /* Memastikan kolom teks rata kiri */
+    .features-text-column {
+        max-width: 100%;
+        text-align: left; /* Teks judul dan deskripsi rata kiri */
+        padding: 0;
+    }
+
+    /* Memastikan list/poin-poin rata kiri */
+    .features-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* List item ke kiri */
+        text-align: left;
+    }
+
+    .features-list li {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    /* --- PERBAIKAN GAMBAR AGAR TIDAK TERPOTONG --- */
+    .features-image-column {
+        width: 100%;
+        margin-top: 0;
+        display: block; /* Menghindari centering dari flex */
+    }
+
+    .image-wrapper-features {
+        width: 100% !important; /* Biarkan lebarnya mengikuti layar */
+        height: auto !important;  /* HAPUS tinggi fixed (320px) agar gambar tidak terpotong */
+        max-width: 500px; /* Batas maksimal agar tidak terlalu besar di tablet */
+        margin: 0; /* Pastikan tidak ada auto margin yang membuatnya ke tengah */
+    }
+
+    .image-wrapper-features img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        display: block;
+        object-fit: contain; /* Memastikan gambar tampil utuh */
+    }
+
+    /* Menyesuaikan posisi kartu melayang agar tidak menutup gambar utama di layar kecil */
+    .floating-card-feature {
+        right: 10px;
+        bottom: 10px;
+        width: 140px;
+        padding: 12px;
+        transform: scale(0.85); /* Sedikit diperkecil agar proporsional */
+    }
+}
+
+/* Tambahan khusus untuk layar sangat kecil (HP) */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.6rem; /* Ukuran font judul sedikit dikecilkan agar muat rata kiri */
+        line-height: 1.3;
+    }
+
+    .features-description {
+        text-align: left; /* Deskripsi rata kiri */
+    }
+}
+
+/*Animasi Feature Section*/
+.features-section .features-image-column,
+.features-section .features-text-column>*,
+/* Semua elemen di dalam kolom teks */
+.features-section .features-list li {
+    opacity: 0;
+    /* Tentukan transisi agar animasi bisa berjalan mulus saat masuk dan keluar */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang spesifik */
+.features-section .features-image-column {
+    transform: translateX(-50px);
+    /* Mulai dari kiri */
+}
+
+.features-section .features-text-column>*,
+.features-section .features-list li {
+    transform: translateX(50px);
+    /* Mulai dari kanan */
+}
+
+/* Kartu kecil yang melayang juga diberi animasi terpisah */
+.features-section .floating-card-feature {
+    transform: translateY(30px) scale(0.9);
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+  Semua elemen akan kembali ke posisi dan opacity normalnya.
+*/
+.features-section.is-visible .features-image-column,
+.features-section.is-visible .features-text-column>*,
+.features-section.is-visible .features-list li,
+.features-section.is-visible .floating-card-feature {
+    opacity: 1;
+    transform: none;
+    /* 'none' akan mereset semua transform (translate, scale, dll) */
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) dengan transition-delay.
+*/
+
+/* Kolom gambar muncul lebih dulu */
+.features-section.is-visible .features-image-column {
+    transition-delay: 0.1s;
+}
+
+/* Kartu kecil muncul setelah gambar utama stabil */
+.features-section.is-visible .floating-card-feature {
+    transition-delay: 0.4s;
+}
+
+/* Elemen teks muncul secara berurutan */
+.features-section.is-visible .section-subtitle {
+    transition-delay: 0.2s;
+}
+
+.features-section.is-visible .section-title {
+    transition-delay: 0.3s;
+}
+
+.features-section.is-visible .features-description {
+    transition-delay: 0.4s;
+}
+
+/* Daftar fitur juga muncul satu per satu */
+.features-section.is-visible .features-list li:nth-child(1) {
+    transition-delay: 0.5s;
+}
+
+.features-section.is-visible .features-list li:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.features-section.is-visible .features-list li:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+.features-section.is-visible .features-list li:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+.features-section.is-visible .features-list li:nth-child(5) {
+    transition-delay: 0.9s;
+}
+
+/* === CSS UNTUK SECTION KELEBIHAN (DENGAN BALANCE CARD GLASSMORPHISM) === */
+.advantages-section {
+    padding: 60px 4% 80px 4%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.advantages-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Kolom Kiri: Teks */
+.advantages-text-column {
+    flex: 1;
+}
+
+.advantages-description {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-secondary);
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.advantages-image-column {
+    flex: 1.1;
+}
+
+/* Gambar biasa dengan border-radius dan shadow */
+.advantages-image-column img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi Advantages Section */
+.advantages-section .advantages-text-column>*,
+/* Semua elemen di dalam kolom teks */
+.advantages-section .advantages-image-column {
+    opacity: 0;
+    /* Gunakan transisi agar animasi bisa direset (berjalan mulus saat masuk dan keluar) */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang spesifik */
+.advantages-section .advantages-text-column>* {
+    transform: translateX(-50px);
+    /* Mulai dari kiri */
+}
+
+.advantages-section .advantages-image-column {
+    transform: translateX(50px);
+    /* Mulai dari kanan */
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+  Semua elemen akan kembali ke posisi dan opacity normalnya.
+*/
+.advantages-section.is-visible .advantages-text-column>*,
+.advantages-section.is-visible .advantages-image-column {
+    opacity: 1;
+    transform: none;
+    /* Mereset transform ke posisi asli */
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) dengan transition-delay.
+*/
+/* Gambar akan muncul bersamaan dengan elemen teks pertama */
+.advantages-section.is-visible .advantages-image-column {
+    transition-delay: 0.1s;
+}
+
+/* Elemen teks muncul secara berurutan */
+.advantages-section.is-visible .section-subtitle {
+    transition-delay: 0.2s;
+}
+
+.advantages-section.is-visible .section-title {
+    transition-delay: 0.3s;
+}
+
+.advantages-section.is-visible .advantages-description {
+    transition-delay: 0.4s;
+}
+
+.advantages-section.is-visible .advantages-button-wrapper {
+    transition-delay: 0.5s;
+}
+
+/* === CSS UNTUK SECTION TAHAPAN PEMESANAN === */
+
+.process-section {
+    padding: 60px 4%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.process-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Kolom Kiri: Gambar */
+.process-image-column {
+    flex: 0.9;
+}
+
+.process-image-column img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Kolom Kanan: Teks */
+.process-text-column {
+    flex: 1.3;
+}
+
+.process-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.2;
+    margin: 10px 0 30px 0;
+}
+
+/* Kontainer untuk semua langkah */
+.process-steps {
+    position: relative;
+}
+
+/* Garis vertikal di belakang nomor */
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    bottom: 15px;
+    left: 20px;
+    /* Posisi horizontal garis */
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 55px;
+    /* Beri ruang untuk nomor */
+}
+
+.process-step:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* Lingkaran Nomor */
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #3c2323;
+    /* Warna ungu gelap */
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--pink);
+    margin: 20px 0 8px 0;
+}
+
+.step-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 20px 0 8px 0;
+    line-height: 1.8;
+
+}
+
+.step-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* Media Query untuk membuat section ini responsif */
+@media (max-width: 992px) {
+    .process-container {
+        flex-direction: column-reverse;
+        /* Teks di atas, gambar di bawah */
+    }
+
+    .process-image-column {
+        margin-top: 60px;
+        width: 100%;
+    }
+}
+
+/* Animasi section process */
+.process-section .process-image-column,
+.process-section .process-text-column>p,
+/* subtitle & description */
+.process-section .process-text-column>h2,
+/* title */
+.process-section .process-step {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Garis vertikal akan "tumbuh" dari atas ke bawah */
+.process-section .process-steps::before {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.6s ease-out;
+}
+
+
+/* Atur posisi awal yang spesifik */
+.process-section .process-image-column {
+    transform: translateX(-50px);
+    /* Mulai dari kiri */
+}
+
+.process-section .process-text-column>p,
+.process-section .process-text-column>h2 {
+    transform: translateX(50px);
+    /* Mulai dari kanan */
+}
+
+/* ---- PERUBAHAN DI SINI ---- */
+.process-section .process-step {
+    transform: translateY(30px);
+    /* Setiap langkah mulai dari bawah, bukan dari kanan */
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+*/
+.process-section.is-visible .process-image-column,
+.process-section.is-visible .process-text-column>p,
+.process-section.is-visible .process-text-column>h2,
+.process-section.is-visible .process-step {
+    opacity: 1;
+    transform: none;
+}
+
+.process-section.is-visible .process-steps::before {
+    transform: scaleY(1);
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) dengan transition-delay.
+  (Bagian ini tidak perlu diubah)
+*/
+.process-section.is-visible .process-image-column {
+    transition-delay: 0.1s;
+}
+
+.process-section.is-visible .section-subtitle {
+    transition-delay: 0.2s;
+}
+
+.process-section.is-visible .section-title {
+    transition-delay: 0.3s;
+}
+
+.process-section.is-visible .process-description {
+    transition-delay: 0.4s;
+}
+
+.process-section.is-visible .process-steps::before {
+    transition-delay: 0.5s;
+}
+
+.process-section.is-visible .process-step:nth-child(1) {
+    transition-delay: 0.6s;
+}
+
+.process-section.is-visible .process-step:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.process-section.is-visible .process-step:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.process-section.is-visible .process-step:nth-child(4) {
+    transition-delay: 0.9s;
+}
+
+/* === CSS FINAL (DIKELOLA OLEH JAVASCRIPT) === */
+
+.projects-section {
+    padding: 50px 0;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.scroller-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.scroller__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding-block: 1rem;
+    /* Memberi petunjuk ke browser untuk mengoptimalkan perubahan transform */
+    will-change: transform;
+}
+
+.scroller__inner img {
+    height: 220px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === CSS UNTUK SECTION BENEFIT & PROMO (DENGAN GAMBAR KOMPLEKS BARU) === */
+
+.benefits-section {
+    padding: 80px 4%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    /* Tambahkan ini agar elemen tidak terlihat sebelum animasi */
+}
+
+.benefits-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Kolom Kiri: Gambar */
+.benefits-image-column {
+    flex: 1.1;
+    position: relative;
+    min-height: 400px;
+}
+
+/* 
+  Langkah 1: Atur keadaan Awal (tersembunyi) untuk semua elemen.
+*/
+.benefits-image-column>div,
+/* Semua kartu di kolom gambar */
+.benefits-text-column>*,
+/* Semua elemen di kolom teks */
+.benefits-list li {
+    opacity: 0;
+    /* Gunakan transisi agar animasi bisa direset */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang spesifik */
+.benefits-image-column>div {
+    transform: translateX(-50px);
+    /* Semua kartu gambar mulai dari kiri */
+}
+
+.benefits-text-column>*,
+.benefits-list li {
+    transform: translateX(50px);
+    /* Semua elemen teks mulai dari kanan */
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+*/
+.benefits-section.is-visible .benefits-image-column>div,
+.benefits-section.is-visible .benefits-text-column>*,
+.benefits-section.is-visible .benefits-list li {
+    opacity: 1;
+    transform: none;
+    /* Mereset transform ke posisi asli */
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) dengan transition-delay.
+*/
+/* Kartu-kartu di kolom gambar muncul berurutan */
+.benefits-section.is-visible .main-image-card {
+    transition-delay: 0.1s;
+}
+
+.benefits-section.is-visible .glassy-card-feature {
+    transition-delay: 0.2s;
+}
+
+.benefits-section.is-visible .analysis-card-feature {
+    transition-delay: 0.3s;
+}
+
+.benefits-section.is-visible .balance-card-feature {
+    transition-delay: 0.4s;
+}
+
+/* Elemen-elemen di kolom teks juga muncul berurutan */
+.benefits-section.is-visible .section-subtitle {
+    transition-delay: 0.2s;
+}
+
+.benefits-section.is-visible .section-title {
+    transition-delay: 0.3s;
+}
+
+.benefits-section.is-visible .promo-banner {
+    transition-delay: 0.4s;
+}
+
+.benefits-section.is-visible .benefits-list li:nth-child(1) {
+    transition-delay: 0.5s;
+}
+
+.benefits-section.is-visible .benefits-list li:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.benefits-section.is-visible .benefits-list li:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+/* Kode styling asli (yang tidak berhubungan dengan animasi) tetap dipertahankan di bawah ini */
+/* ... (salin sisa kode CSS asli Anda untuk .benefits-section dari sini ke bawah, 
+      kecuali bagian @keyframes dan properti 'animation' yang sudah kita hapus) ... */
+.main-image-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 250px;
+    background: #3a2d58;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.image-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.glassy-card-feature {
+    position: absolute;
+    top: 80px;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    width: 150px;
+    z-index: 2;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glassy-card-feature .percent {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.glassy-card-feature .desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.analysis-card-feature {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background-color: #2a233c;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.analysis-card-feature .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.analysis-card-feature .main-percent {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--pink);
+    margin: 15px 0;
+}
+
+.bar-chart-container {
+    display: flex;
+    gap: 10px;
+    height: 80px;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100%;
+    background-color: var(--purple);
+    border-radius: 5px;
+}
+
+.bar:nth-child(2) {
+    background-color: var(--blue);
+}
+
+.bar:nth-child(3) {
+    background-color: var(--pink);
+}
+
+.balance-card-feature {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.balance-card-feature i {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.balance-card-feature .balance-amount {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.balance-card-feature .balance-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.main-image-card:hover,
+.glassy-card-feature:hover,
+.analysis-card-feature:hover,
+.balance-card-feature:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.benefits-text-column {
+    flex: 1;
+}
+
+.promo-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(90deg, var(--pink), var(--purple));
+    padding: 15px;
+    border-radius: 15px;
+    margin: 25px 0 35px 0;
+}
+
+.promo-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-icon i {
+    color: #fff;
+}
+
+.promo-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.promo-text p {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    display: flex;
+    gap: 15px;
+}
+
+.benefits-list li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.benefits-list i {
+    color: var(--pink);
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.benefits-list h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.benefits-list p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+    .benefits-container {
+        flex-direction: column-reverse;
+    }
+
+    .benefits-image-column {
+        margin-top: 80px;
+        width: 100%;
+        transform: scale(0.9);
+    }
+}
+
+/* === PERBAIKAN FINAL (UKURAN SAMA) UNTUK SECTION HARGA === */
+
+.pricing-section {
+    padding: 70px 4%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    /* PERUBAHAN: Menghapus 'align-items: center' agar kartu bisa meregang sama tinggi */
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+
+    /* PERUBAHAN: Mengubah kartu menjadi flex container vertikal */
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-15px);
+    background:
+        linear-gradient(#121212, #121212) padding-box,
+        linear-gradient(135deg, #aa71be, #4776e6, #f857a6, #ffc258) border-box;
+
+    /* Efek glow yang Anda inginkan */
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 0 15px rgba(142, 84, 233, 0.5),
+        0 0 25px rgba(247, 87, 100, 0.4);
+}
+
+.pricing-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.pricing-card .price {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--pink);
+    margin-bottom: 25px;
+}
+
+.pricing-card .price span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    vertical-align: middle;
+}
+
+.pricing-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+.pricing-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.pricing-features-list li i {
+    width: 18px;
+    height: 18px;
+    color: var(--pink);
+    flex-shrink: 0;
+}
+
+.pricing-features-list li.disabled {
+    opacity: 0.5;
+}
+
+.pricing-features-list li.disabled i {
+    color: var(--text-secondary);
+}
+
+.btn-pricing {
+    width: 100%;
+    /* PERUBAHAN: Mendorong tombol ke bagian paling bawah kartu */
+    margin-top: auto;
+}
+
+/* Media Query untuk membuat card responsif */
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*animasi pricing */
+
+.pricing-section .section-header,
+.pricing-section .pricing-card {
+    opacity: 0;
+    transform: translateY(40px);
+    /* Definisikan transisi untuk animasi yang mulus */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.pricing-section.is-visible .section-header,
+.pricing-section.is-visible .pricing-card {
+    opacity: 1;
+    transform: none;
+    /* Mereset transform ke posisi asli */
+}
+
+.pricing-section.is-visible .section-header {
+    transition-delay: 0.1s;
+}
+
+/* Setiap kartu harga muncul secara berurutan setelah header */
+.pricing-section.is-visible .pricing-card:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.pricing-section.is-visible .pricing-card:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.pricing-section.is-visible .pricing-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.pricing-section.is-visible .pricing-card:nth-child(4) {
+    transition-delay: 0.5s;
+}
+
+/* === CSS UNTUK SECTION LANGGANAN HOSTING === */
+
+.subscription-section {
+    padding: 80px 4%;
+}
+
+.subscription-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    /* Efek Glassmorphism untuk kontainer utama */
+    background: rgba(42, 35, 60, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.subscription-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 15px auto 40px auto;
+}
+
+/* Toggle Switch Container */
+.subscription-toggle {
+    position: relative;
+    display: flex;
+    background-color: rgba(18, 18, 18, 0.5);
+    /* Background gelap untuk toggle */
+    border-radius: 50px;
+    /* Bentuk pil */
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+/* Slider Gradien yang Bergerak */
+.toggle-slider {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(33.33% - 3.33px);
+    /* Lebar 1/3 dari kontainer */
+    height: calc(100% - 10px);
+    background: linear-gradient(90deg, var(--dark-pink), var(--dark-purple));
+    border-radius: 50px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Posisi awal di tombol ketiga (1 Tahun) */
+    transform: translateX(200%);
+}
+
+/* Tombol Pilihan di dalam Toggle */
+.toggle-option {
+    flex: 1;
+    /* Agar ketiga tombol lebarnya sama */
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    /* Di atas slider */
+    transition: color 0.4s ease;
+}
+
+.toggle-option.active {
+    color: #fff;
+    /* Teks menjadi putih cerah saat aktif */
+}
+
+/* Detail Harga */
+.subscription-details {
+    margin-bottom: 30px;
+}
+
+#hosting-price {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.discount-tag {
+    display: inline-block;
+    background-color: rgba(249, 113, 170, 0.15);
+    color: var(--pink);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.subscription-section .subscription-container {
+    opacity: 0;
+    transform: scale(0.95);
+    /* Definisikan transisi untuk animasi yang mulus */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+  Kontainer akan kembali ke opacity penuh dan ukuran normalnya.
+*/
+.subscription-section.is-visible .subscription-container {
+    opacity: 1;
+    transform: scale(1);
+    /* Kembali ke ukuran normal */
+}
+
+/* === CSS UNTUK SECTION CTA (VERSI SIMPLE) === */
+
+.cta-section-simple {
+    padding: 60px 4%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-container-simple {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Kolom Kiri: Teks */
+.cta-text-column {
+    flex: 1.1;
+    /* Beri sedikit lebih banyak ruang untuk teks */
+}
+
+.cta-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Daftar Poin Konsultasi */
+.cta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.cta-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.cta-list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.cta-list li i {
+    color: var(--pink);
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.cta-disclaimer {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    margin: 0;
+    margin-top: 25px;
+}
+
+/* Kolom Kanan: Gambar */
+.cta-image-column {
+    flex: 0.9;
+}
+
+.cta-image-column img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media Query untuk membuat section ini responsif */
+@media (max-width: 992px) {
+    .cta-container-simple {
+        flex-direction: column;
+        /* Teks di atas, gambar di bawah */
+    }
+
+    .cta-image-column {
+        margin-top: 60px;
+        width: 100%;
+    }
+}
+
+/* animasi cta section */
+.cta-section-simple .cta-text-column>*,
+/* Semua elemen di dalam kolom teks */
+.cta-section-simple .cta-list li,
+.cta-section-simple .cta-image-column {
+    opacity: 0;
+    /* Gunakan transisi agar animasi bisa direset (berjalan mulus saat masuk dan keluar) */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Atur posisi awal yang spesifik */
+.cta-section-simple .cta-text-column>*,
+.cta-section-simple .cta-list li {
+    transform: translateX(-50px);
+    /* Mulai dari kiri */
+}
+
+.cta-section-simple .cta-image-column {
+    transform: translateX(50px);
+    /* Mulai dari kanan */
+}
+
+
+/* 
+  Langkah 2: Atur keadaan Akhir (terlihat) saat section memiliki kelas .is-visible.
+*/
+.cta-section-simple.is-visible .cta-text-column>*,
+.cta-section-simple.is-visible .cta-list li,
+.cta-section-simple.is-visible .cta-image-column {
+    opacity: 1;
+    transform: none;
+    /* Mereset transform ke posisi asli */
+}
+
+
+/* 
+  Langkah 3: Terapkan Efek Staggered (muncul satu per satu) dengan transition-delay.
+*/
+/* Gambar muncul bersamaan dengan judul */
+.cta-section-simple.is-visible .cta-image-column {
+    transition-delay: 0.1s;
+}
+
+/* Elemen teks muncul secara berurutan */
+.cta-section-simple.is-visible .section-title {
+    transition-delay: 0.2s;
+}
+
+.cta-section-simple.is-visible .cta-description {
+    transition-delay: 0.3s;
+}
+
+.cta-section-simple.is-visible .cta-list li:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.cta-section-simple.is-visible .cta-list li:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.cta-section-simple.is-visible .cta-list li:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.cta-section-simple.is-visible .cta-button {
+    transition-delay: 0.7s;
+}
+
+.cta-section-simple.is-visible .cta-disclaimer {
+    transition-delay: 0.8s;
+}
+
+/* === REVISI CSS FOOTER === */
+
+.site-footer {
+    background-color: #1a1a1a;
+    color: var(--text-secondary);
+    padding: 80px 0 30px 0;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 5%;
+}
+
+.footer-column {
+    flex: 1 1 200px; /* Fleksibel, lebar minimal 200px */
+}
+
+.footer-brand {
+    flex: 2 1 300px; /* Kolom brand dibuat lebih lebar */
+}
+
+/* Logo di Footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 35px;
+    width: auto;
+}
+
+.footer-logo .logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-logo .logo-web {
+    color: #6447a7;
+}
+
+.footer-tagline {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+
+.footer-about {
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.7;
+    max-width: 400px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Garis kecil di bawah judul kolom */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--pink);
+}
+
+.footer-links, .footer-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+    transform: translateX(5px);
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-contact-list i {
+    color: var(--pink);
+    width: 18px;
+    height: 18px;
+}
+
+.footer-contact-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    margin: 40px 0 20px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+/* --- RESPONSIVITAS FOOTER --- */
+
+/* Tablet (Lebar di bawah 992px) */
+@media (max-width: 992px) {
+    .footer-container {
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        flex: 1 1 100%; /* Brand mengambil baris penuh di tablet */
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile (Lebar di bawah 600px) */
+@media (max-width: 600px) {
+    .site-footer {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%; /* Semua kolom jadi 1 baris */
+        margin-bottom: 10px;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%); /* Garis judul jadi di tengah */
+    }
+
+    .footer-about {
+        margin: 0 auto;
+    }
+
+    .footer-contact-list li {
+        justify-content: center;
+    }
+
+    .footer-links a:hover {
+        transform: translateY(-3px); /* Hover HP: naik sedikit saja */
+    }
+}
+
+/* Light Mode Footer Adjustment */
+body.light-mode .site-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+body.light-mode .footer-logo .logo-text,
+body.light-mode .footer-column h4 {
+    color: #212121;
+}
+
+body.light-mode .footer-links a,
+body.light-mode .footer-contact-list a,
+body.light-mode .footer-about {
+    color: #555;
+}
+
+/* === CSS UNTUK POP-UP CHAT WHATSAPP === */
+
+.whatsapp-popup-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    /* Pastikan di atas semua elemen lain */
+}
+
+/* Tombol Pemicu (Ikon WA) */
+.whatsapp-trigger-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    /* Warna khas WhatsApp */
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-trigger-btn:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-trigger-btn i {
+    width: 32px;
+    height: 32px;
+}
+
+/* Jendela Chat Pop-up */
+.whatsapp-chat-window {
+    position: absolute;
+    bottom: 80px;
+    /* Posisi di atas tombol pemicu */
+    right: 0;
+    width: 320px;
+
+    /* Efek Glassmorphism */
+    background: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+
+    /* Animasi muncul dan hilang */
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transform-origin: bottom right;
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+    /* Tidak bisa diklik saat tersembunyi */
+}
+
+/* State aktif saat jendela chat muncul */
+.whatsapp-chat-window.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+}
+
+.close-btn i {
+    width: 20px;
+    height: 20px;
+}
+
+.chat-body {
+    padding: 20px;
+}
+
+.chat-body p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.chat-footer {
+    padding: 0 20px 20px 20px;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    text-decoration: none;
+    padding: 12px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+
+/* LIGHT MODE */
+/* === LIGHT MODE COLOR PALETTE === */
+body.light-mode {
+    /* Warna Dasar */
+    --pink: #f971aa;
+    --dark-pink: #ed2075;
+    --dark-bg: #fff;
+    --text-primary: #212121;
+    --text-secondary: #52525b;
+    --text-primer: #fff;
+}
+
+body.light-mode .section-title .highlight {
+    background: linear-gradient(90deg, #f9b06b, #f971aa, #7748a8, #748cd2);
+    /* pink → ungu */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Elemen Spesifik Light Mode --- */
+body.light-mode nav {
+    background-color: rgba(255, 255, 255, 0.409);
+    /* Navigasi lebih transparan */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode nav .icon-button i {
+    stroke: var(--text-primary);
+}
+
+body.light-mode .btn-outline-gradient {
+    background:
+        linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+        linear-gradient(90deg, var(--pink), var(--purple)) border-box;
+    color: var(--text-primary);
+}
+
+body.light-mode .btn-outline-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 10px rgba(249, 113, 170, 0.4),
+        0 0 20px rgba(119, 72, 168, 0.4);
+    background:
+        linear-gradient(var(--dark-bg), var(--dark-bg)) padding-box,
+        linear-gradient(135deg, var(--hover-purple-1), var(--hover-purple-2)) border-box;
+    color: var(--text-primary);
+}
+
+body.light-mode .btn-solid-gradient {
+    background:
+        linear-gradient(90deg, var(--pink), var(--purple)) border-box;
+    color: var(--text-primer);
+}
+
+body.light-mode .btn-solid-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 10px rgba(249, 113, 170, 0.4),
+        0 0 20px rgba(119, 72, 168, 0.4);
+    background:
+        linear-gradient(135deg, var(--hover-purple-1), var(--hover-purple-2)) border-box;
+}
+
+body.light-mode .about-container {
+    background-color: #826a94;
+}
+
+body.light-mode .about-subtitle,
+.about-heading,
+.about-description {
+    color: var(--text-primer);
+}
+
+body.light-mode .service-card,
+body.light-mode .project-card,
+body.light-mode .pricing-card {
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .service-card:hover,
+body.light-mode .pricing-card:hover {
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(135deg, #aa71be, #4776e6, #f857a6, #ffc258) border-box;
+}
+
+body.light-mode .icon-wrapper {
+    background-color: rgba(254, 200, 218, 0.5);
+    border: 1px solid rgba(245, 73, 153, 0.689);
+    color: #dd5e82;
+}
+
+body.light-mode .step-number {
+    background-color: #e9e5f3;
+}
+
+body.light-mode .subscription-container {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .toggle-slider {
+    background: linear-gradient(90deg, var(--pink), var(--purple));
+    border-radius: 50px;
+}
+
+/* Tombol Pilihan di dalam Toggle */
+body.light-mode .toggle-option {
+    background: none;
+    border: none;
+    color: var(--text-primer);
+}
+
+body.light-mode .site-footer {
+    background-color: #050f1d;
+    color: var(--text-primer);
+}
+
+body.light-mode .footer-column .logo {
+    color: var(--text-primer);
+}
+
+body.light-mode .footer-column h4,
+.footer-links,
+.footer-contact-list {
+    color: var(--text-primer);
+}
+
+/* Jendela Chat Pop-up */
+body.light-mode .whatsapp-chat-window {
+    /* Efek Glassmorphism */
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(112, 112, 112, 0.3);
+}
+
+/* Menambahkan transisi agar perpindahan warna halus */
+body,
+nav,
+.btn,
+.service-card,
+.project-card,
+.pricing-card,
+.about-container,
+.site-footer {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* =================================================================== */
+/* === KODE RESPONSIVE FINAL (PENDEKATAN BERLAPIS TABLET & HP) === */
+/* =================================================================== */
+
+/* --- Breakpoint 1: Untuk Tablet dan di bawahnya (lebar <= 992px) --- */
+@media (max-width: 992px) {
+
+    /* 1. PERMINTAAN: Ubah Navigasi untuk Tablet */
+    nav .nav-links {
+        display: none;
+        /* Sembunyikan link "Home, Tentang, dll" */
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        /* Paksa logo & tombol tetap satu baris */
+        justify-content: space-between;
+    }
+
+    /* 2. PERMINTAAN: Kurangi Jarak Antar Section di Tablet */
+    .about-section {
+        padding-top: 60px;
+        /* Kurangi dari 100px */
+        margin-top: 0;
+        /* Hapus margin atas */
+    }
+
+    /* 3. Atur Ulang Tata Letak menjadi Vertikal untuk Tablet */
+    .hero-section,
+    .about-container,
+    .advantages-container,
+    .features-container,
+    .process-container,
+    .benefits-container,
+    .cta-container-simple {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+        /* Paksa WADAH untuk meregang 100% dari lebar layar */
+        max-width: 100%;
+        /* Pastikan tidak ada batasan lebar maksimal pada wadah */
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-section {
+        padding-bottom: 20px;
+        /* Kurangi padding bawah hero section */
+    }
+
+    .about-section {
+        /* Kurangi padding atas secara drastis untuk merapatkan jarak */
+        padding-top: 20px;
+    }
+
+    /* 3. PERBAIKI GAMBAR FEATURES SECTION YANG TERPOTONG */
+    .image-wrapper-features {
+        width: 100%;
+        /* Ganti lebar tetap 500px menjadi 100% agar fleksibel */
+        max-width: 100%;
+        /* Beri batas agar proporsional */
+    }
+
+    .floating-card-feature {
+        /* Posisikan ulang kartu agar tidak keluar layar */
+        right: 10px;
+        bottom: -15px;
+    }
+
+    /* Posisikan gambar di atas teks */
+    .hero-section,
+    .advantages-container {
+        flex-direction: column-reverse;
+    }
+
+    /* Pusatkan konten dan sesuaikan lebar kolom */
+    .hero-content,
+    .about-text-column,
+    .advantages-text-column,
+    .features-text-column,
+    .cta-text-column {
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-buttons,
+    .advantages-button-wrapper {
+        justify-content: center;
+    }
+
+    /* Perbaiki bug animasi gambar About */
+    .about-image-column img {
+        position: relative !important;
+        transform: none !important;
+        width: 100%;
+        max-width: 100%;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    /* Ubah layout grid */
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Di tablet, buat jadi 2 kolom */
+    }
+
+    .footer-container {
+        flex-wrap: wrap;
+        /* Izinkan footer turun baris di tablet */
+        justify-content: center;
+    }
+}
+
+
+/* --- Breakpoint 2: Penyesuaian Tambahan untuk HP Kecil (lebar <= 576px) --- */
+@media (max-width: 576px) {
+
+    /* 1. PERMINTAAN: Perbaiki Tombol Navigasi yang Keluar */
+    nav {
+        padding: 10px 15px;
+        /* Perkecil padding internal nav */
+    }
+
+    nav .logo {
+        font-size: 16px;
+        /* Perkecil font logo */
+    }
+
+    nav .nav-buttons {
+        gap: 8px;
+        /* Rapatkan jarak antar tombol */
+    }
+
+    nav .btn {
+        padding: 6px 16px;
+        /* Perkecil padding tombol */
+        font-size: 13px;
+        /* Perkecil font tombol */
+    }
+
+    nav .icon-button {
+        padding: 6px;
+        /* Perkecil tombol ikon */
+    }
+
+    /* 2. Sesuaikan Ukuran Font Judul untuk HP */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    /* 32px */
+    .section-title,
+    .about-heading {
+        font-size: 1.75rem;
+    }
+
+    /* 28px */
+
+    /* 3. Ubah Grid menjadi 1 Kolom Penuh untuk HP */
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. Pastikan list di tengah */
+    .features-list,
+    .cta-list {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+/* ========================================= */
+/* === CSS KHUSUS MOBILE NAVBAR & MENU === */
+/* ========================================= */
+
+/* Default: Sembunyikan elemen mobile di Desktop */
+.mobile-toggle-btn,
+.mobile-menu {
+    display: none;
+}
+
+/* BREAKPOINT TABLET & MOBILE (<= 992px) */
+@media (max-width: 992px) {
+
+    /* 1. Atur Top Navbar (Solid, Tanpa Radius, Full Width) */
+    nav.navbar {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0; /* Permintaan: Tidak pakai radius */
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
+        /* Permintaan: Tanpa Glassmorphism di Topbar, Warna Solid mengikuti tema */
+        background-color: var(--dark-bg); 
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        
+        justify-content: space-between;
+        padding: 15px 20px;
+        z-index: 1000;
+    }
+
+    /* Sembunyikan Menu Desktop Asli */
+    .desktop-nav {
+        display: none !important;
+    }
+
+    /* 2. Styling Tombol Burger */
+    .mobile-toggle-btn {
+        display: flex;
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 5px;
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-toggle-btn:focus {
+        outline: none;
+    }
+
+    /* 3. Styling Mobile Menu Dropdown (Glassmorphism Effect) */
+    .mobile-menu {
+        display: block; /* Agar bisa ditransisikan */
+        position: absolute;
+        top: 100%; /* Tepat di bawah navbar */
+        left: 0;
+        width: 100%;
+        
+        /* Permintaan: Bagian ini menggunakan Glassmorphism */
+        background: rgba(18, 18, 18, 0.85); /* Base dark transparan */
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
+        padding: 0;
+        max-height: 0; /* Untuk animasi slide down */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Class aktif saat menu dibuka */
+    .mobile-menu.active {
+        max-height: 500px; /* Cukup tinggi untuk menampung konten */
+        padding: 20px 0;
+    }
+
+    /* Isi Link Menu Mobile */
+    .mobile-menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-menu-links a {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        transition: color 0.3s ease, background 0.3s ease;
+    }
+
+    .mobile-menu-links a:hover {
+        color: var(--pink);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Tombol di Menu Mobile */
+    .mobile-menu-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* ========================================= */
+    /* === MODE TERANG (LIGHT MODE) SUPPORT === */
+    /* ========================================= */
+    
+    body.light-mode nav.navbar {
+        /* Topbar Light Mode: Solid Putih, Tanpa Glassmorphism */
+        background-color: #ffffff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .mobile-menu {
+        /* Dropdown Light Mode: Glassmorphism Putih */
+        background: rgba(255, 255, 255, 0.85);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    body.light-mode .mobile-toggle-btn {
+        color: var(--text-primary);
+    }
+    
+    body.light-mode .mobile-menu-buttons {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
