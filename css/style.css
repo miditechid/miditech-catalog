@@ -958,6 +958,7 @@ nav .icon-button i {
 
     /* Memastikan list/poin-poin rata kiri */
     .features-list {
+        padding-top: 8px;
         display: flex;
         flex-direction: column;
         align-items: flex-start; /* List item ke kiri */
@@ -3058,4 +3059,5 @@ nav,
     body.light-mode .mobile-menu-buttons {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
+
 }
